@@ -13,14 +13,14 @@ public class ThreadParallelismDemo {
     public static void main(String[] args) {
         
         // 2. Create the tasks (Runnable objects)
-        SimpleTask taskA = new SimpleTask("Nima-A");
-        SimpleTask taskB = new SimpleTask("Nima-B");
+        SimpleTask taskA = new SimpleTask("Thread-1");
+        SimpleTask taskB = new SimpleTask("Thread-2");
         
         // 3. Create the Thread objects and assign the tasks
         Thread tA = new Thread(taskA);
         Thread tB = new Thread(taskB);
         
-        System.out.println("\nEkkino tin pareleli ektelesi...");
+        System.out.println("\nStarting execution...");
         
         // 4. Start the execution (calls run() asynchronously)
         tA.start();
@@ -34,7 +34,7 @@ public class ThreadParallelismDemo {
             System.out.println("Main thread interrupted.");
         }
         
-        System.out.println("\nI kyria diergasia (main) teleiose.");
+        System.out.println("\nMain finished");
     }
     
 }

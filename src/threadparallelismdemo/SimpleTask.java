@@ -22,7 +22,7 @@ public class SimpleTask implements Runnable {
 
         // Execute 5 steps
         for (int i = 1; i <= 5; i++) {
-            System.out.println(threadName + ": Vima " + i);
+            System.out.println(threadName + ": Step " + i);
             try {
                 // Wait for a short time to show interleaving
                 Thread.sleep(100); 
