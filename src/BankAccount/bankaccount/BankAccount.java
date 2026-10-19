@@ -5,7 +5,7 @@ public class BankAccount {
 
     private int balance = 0;
     
-    public void deposit(int amount) {
+    public synchronized void deposit(int amount) {
         int currentBalance = balance;
         
         try {
