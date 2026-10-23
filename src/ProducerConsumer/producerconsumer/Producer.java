@@ -9,7 +9,7 @@ class Producer implements Runnable {
     public void run() {
         for (int i = 0; i < 10; i++) { // Παράγει 10 στοιχεία
             try {
-                buffer.produce(i);
+                buffer.put(i);
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt(); // Επαναφέρουμε τη σημαία διακοπής
