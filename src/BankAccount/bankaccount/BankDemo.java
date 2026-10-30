@@ -11,7 +11,7 @@ package bankaccount;
 public class BankDemo {
     public static void main(String[] args) {
         BankAccount sharedAccount = new BankAccount();
-        int iterations = 1000;
+        int iterations = 10000;
         int depositAmount = 1;
         
         Thread wife = new Thread(new DepositTask(sharedAccount, iterations, depositAmount),"wife");
